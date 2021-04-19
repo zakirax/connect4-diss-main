@@ -1,0 +1,49 @@
+% = modulo operator = Gets the remainder 
+
+0: (6) [1, 0, 0, 0, 0, 0]
+1: (6) [0, 0, 0, 0, 0, 0]
+2: (6) [0, 0, 0, 0, 0, 0]
+3: (6) [0, 0, 0, 0, 0, 0]
+4: (6) [0, 0, 0, 0, 0, 0]
+5: (6) [0, 0, 0, 0, 0, 0]
+6: (6) [0, 0, 0, 0, 0, 1]
+
+
+10 % 7
+3
+
+0 % 7
+0
+
+1 % 7
+1
+
+2 % 7
+2
+
+3 % 7 
+3
+
+41 % 7
+6
+
+
+----------
+
+
+// DID NOT WORK
+    if (1 == board[col][row] === board[col][row + 1] === board[col][row + 2] === board[col][row + 3]) {
+        alert('WINNER');
+    }
+
+// DID WORK
+     if (board[col][row] === 1 && board[col][row + 1] === 1 && board[col][row + 2] === 1 && board[col][row + 3] === 1) {
+        alert('WINNER');
+    }
+
+
+----
+
+https://medium.com/@bretcameron/how-to-make-your-code-faster-using-javascript-sets-b432457a4a77
+    let playerNums = new Set([1,2]); // Player number
+Why to use sets for Arrays
