@@ -1,0 +1,78 @@
+* { /*setting the global parameters*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background: rgb(248, 201, 209);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding: 25px;
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase; /*displays the title in uppercase letters*/
+}
+
+.game-board{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 600px; /*sets the width of the black box*/
+  height: 520px; /*sets the height of the black box*/
+  top: 9rem;
+  background: black;
+}
+
+.game-board table tr td{ /*creates the white circles in the board*/
+  width: 90px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.reset {
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  color: white; /*font colour of button*/
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.reset:active {
+  background-color: white; /*reset button will flash white when clicked*/
+
+}
+
+.status {
+  display: block;
+  font-size: 20px;
+}
+
+.player-one {
+ background: gray;
+}
+
+.player-two {
+  background: rgb(187, 234, 240);
+}
+

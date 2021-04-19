@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<!specifes the language!>
+
+    <head>
+        <meta charset="UTF-8">
+        <!default charcter encoding in HTML>
+            <meta name="viewport"
+                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!viewport is set to allow the application to look good on all devices>
+                <link rel="stylesheet" href="style.css">
+                <!used to link to the stylesheet>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+                    <script src="connect.js" defer></script>
+                    <!this is the link to my js file>
+                        <title>CONNECT 4</title>
+                        <!title of the game>
+    </head>
+
+
+    <body>
+
+
+        <h1>CONNECT 4</h1>
+        <!-- <!this is the title of the game on the webpage> -->
+
+            <h3><span id="Player-Go"></span></h3>
+
+            <!-- <!used to insert the players name when it is their go> -->
+            <h3 class="player-turn"></h3>
+
+                <h3 id="result"></h3>
+                <!-- <!displays which player has won> -->
+
+                    <div class="game-board">
+                        <!-- <!class name for the game grid with all divs enclosed> -->
+                            <table>
+                                <tr>
+                                    <!-- <!this table encloses the 7 drop columns on the board and has been replicated 6 -->
+                                        <!-- times to represent the 6 rows> -->
+                                    <td class="drop" id="board0"> </td>
+                                    <td class="drop" id="board1"></td>
+                                    <td class="drop" id="board2"></td>
+                                    <td class="drop" id="board3"></td>
+                                    <td class="drop" id="board4"></td>
+                                    <td class="drop" id="board5"></td>
+                                    <td class="drop" id="board6"></td>
+                                </tr>
+                                <tr>
+                                    <td class="drop" id="board7"></td>
+                                    <td class="drop" id="board8"></td>
+                                    <td class="drop" id="board9"></td>
+                                    <td class="drop" id="board10"></td>
+                                    <td class="drop" id="board11"></td>
+                                    <td class="drop" id="board12"></td>
+                                    <td class="drop" id="board13"></td>
+                                </tr>
+                                <tr>
+                                    <td class="drop" id="board14"></td>
+                                    <td class="drop" id="board15"></td>
+                                    <td class="drop" id="board16"></td>
+                                    <td class="drop" id="board17"></td>
+                                    <td class="drop" id="board18"></td>
+                                    <td class="drop" id="board19"></td>
+                                    <td class="drop" id="board20"></td>
+                                </tr>
+                                <tr>
+                                    <td class="drop" id="board21"></td>
+                                    <td class="drop" id="board22"></td>
+                                    <td class="drop" id="board23"></td>
+                                    <td class="drop" id="board24"></td>
+                                    <td class="drop" id="board25"></td>
+                                    <td class="drop" id="board26"></td>
+                                    <td class="drop" id="board27"></td>
+                                </tr>
+                                <tr>
+                                    <td class="drop" id="board28"></td>
+                                    <td class="drop" id="board29"></td>
+                                    <td class="drop" id="board30"></td>
+                                    <td class="drop" id="board31"></td>
+                                    <td class="drop" id="board32"></td>
+                                    <td class="drop" id="board33"></td>
+                                    <td class="drop" id="board34"></td>
+                                </tr>
+                                <tr>
+                                    <td class="drop" id="board35"></td>
+                                    <td class="drop" id="board36"></td>
+                                    <td class="drop" id="board37"></td>
+                                    <td class="drop" id="board38"></td>
+                                    <td class="drop" id="board39"></td>
+                                    <td class="drop" id="board40"></td>
+                                    <td class="drop" id="board41"></td>
+                                </tr>
+                            </table>
+                    </div>
+                    <div class="footer">
+                        <button class="reset">Reset</button>
+                        <!this is the button to reset the game board>
+                            <h3> Status <span id="status"></span></h3>
+
+                    </div>
+    </body>
+
+</html>
