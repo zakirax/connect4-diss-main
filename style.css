@@ -61,15 +61,52 @@ h1 {
   background-color: white; /*reset button will flash white when clicked*/
 }
 
-.status {
-  display: block;
-  font-size: 20px;
+/* The Modal (background) */
+.modal {
+  position: fixed; 
+  z-index: 1;
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
 }
 
-.player-one { /*setting the colour of player 1 counter*/
- background: gray;
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #ade9ad;
+  color: white;
 }
 
-.player-two { /*setting the colour of player 2 counter*/
-  background: rgb(187, 234, 240);
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #ade9ad;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: middle;
+  background-color: white;
+  margin: auto;
+  padding: 0;
+  border: 4px solid black;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
 }

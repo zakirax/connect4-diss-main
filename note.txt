@@ -47,3 +47,46 @@
 https://medium.com/@bretcameron/how-to-make-your-code-faster-using-javascript-sets-b432457a4a77
     let playerNums = new Set([1,2]); // Player number
 Why to use sets for Arrays
+
+
+
+----
+const BOARD_COLS = 7; // SAME as FINAL in Java
+BOARD_COLS = 100; // -> changing the value causes error
+
+connect.js:26 Uncaught TypeError: Assignment to constant variable.
+    at connect.js:26
+(anonymous) @ connect.js:26
+
+
+----
+** Code was this: ***
+
+if (isPlayerOneTurn) {
+// update the cells using red colour e.g.
+board[col][row] = 1; // Player 2, changes grid value to 2
+document.getElementById("board" + cellId).style.background = colours.playerOne; // Red = 1
+document.getElementById("Player-Go").innerHTML = player1Lbl;}
+else {
+board[col][row] = 2;
+document.getElementById("board" + cellId).style.background = colours.playerTwo; // Yellow = 2
+document.getElementById("Player-Go").innerHTML = player2Lbl;
+}
+
+** new code is this: ***
+created a function
+** Why is this better?: Uses DRY (Don't repeat yourself)
+
+function playTurn(cellId, col, row, playerNum, colour, opponentLbl) {
+    board[col][row] = playerNum; // e.g., Player 2, changes grid value to 2
+    document.getElementById("board" + cellId).style.background = colour; // e.g., grey = 1
+    document.getElementById("Player-Go").innerHTML = "Player " + opponentLbl; //sets label of player go
+}
+
+-----
+**created winner.js and button.js by:
+
+Originally all the code was in connect.js 
+this is bad -> 
+All software should be: High Cohesion Low Coupling etc
+https://en.wikipedia.org/wiki/SOLID#:~:text=In%20object%2Doriented%20computer%20programming,understandable%2C%20flexible%2C%20and%20maintainable.
