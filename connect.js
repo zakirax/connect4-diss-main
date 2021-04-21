@@ -1,11 +1,11 @@
 const colours = { // Enum of colours
-    playerOne: "red",
-    playerTwo: "yellow"
+    playerOne: "grey",
+    playerTwo: "purple"
 }
 
-// Player 1 = red, player 2 = yellow // Labels
-var player1Lbl = 'PLAYER 1 - Red'; // Red
-var player2Lbl = 'PLAYER 2 - Yellow'; // Yellow
+// Player 1 = grey, player 2 = purple // Labels
+var player1Lbl = 'PLAYER 1 - Grey'; // grey
+var player2Lbl = 'PLAYER 2 - Purple'; // purple
 var isPlayerOneTurn = true;
 
 var tableRow = document.querySelectorAll('tr'); //this allows us to select each individual (6) row
@@ -86,27 +86,35 @@ function hasWon(playerNum) {
             let hasWon = false;
 
             //vertical check 
-            if (board[col][row] == playerNum && board[col][row + 1] == playerNum &&
-                board[col][row + 2] == playerNum && board[col][row + 3] === playerNum) {
-                hasWon = true;
+            if (row + 3 < boardRows) {
+                if (board[col][row] == playerNum && board[col][row + 1] == playerNum &&
+                    board[col][row + 2] == playerNum && board[col][row + 3] == playerNum) {
+                    hasWon = true;
+                }
             }
 
             //horizontal check 
-            if (board[col][row] == playerNum && board[col + 1][row] == playerNum &&
-                board[col + 2][row] == playerNum && board[col + 3][row] === playerNum) {
-                hasWon = true;
+            if (col + 3 < boardCols) {
+                if (board[col][row] == playerNum && board[col + 1][row] == playerNum &&
+                    board[col + 2][row] == playerNum && board[col + 3][row] == playerNum) {
+                    hasWon = true;
+                }
             }
 
             //diaganol check \ (Top left to bottom right and vice versa)
-            if (board[col][row] == playerNum && board[col + 1][row + 1] == playerNum &&
-                board[col + 2][row + 2] == playerNum && board[col + 3][row + 3] === playerNum) {
-                hasWon = true;
+            if ((row + 3 < boardRows) && (col + 3 < boardCols)) {
+                if (board[col][row] == playerNum && board[col + 1][row + 1] == playerNum &&
+                    board[col + 2][row + 2] == playerNum && board[col + 3][row + 3] == playerNum) {
+                    hasWon = true;
+                }
             }
 
             // //diaganol check / (bottom left to top right)
-            if (board[col][row] == playerNum && board[col + 1][row - 1] == playerNum &&
-                board[col + 2][row - 2] == playerNum && board[col + 3][row - 3] === playerNum) {
-                hasWon = true;
+            if ((row - 3 > 0) && (col + 3 < boardCols)) {
+                if (board[col][row] == playerNum && board[col + 1][row - 1] == playerNum &&
+                    board[col + 2][row - 2] == playerNum && board[col + 3][row - 3] == playerNum) {
+                    hasWon = true;
+                }
             }
 
             if (hasWon) {

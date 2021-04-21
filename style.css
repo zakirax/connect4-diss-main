@@ -6,11 +6,11 @@
 
 body {
   align-items: center;
-  background: rgb(248, 201, 209);
+  background: rgb(253, 216, 223);
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  padding: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 30px;
   width: 100%;
 }
 
@@ -20,21 +20,21 @@ h1 {
 
 .game-board{
   position: absolute;
-  left: 50%;
+  left: 50%; /*sets place on screen*/
   transform: translate(-50%);
-  width: 600px; /*sets the width of the black box*/
-  height: 520px; /*sets the height of the black box*/
-  top: 9rem;
-  background: black;
+  width: 500px; /*sets the width of the black box*/
+  height: 440px; /*sets the height of the black box*/
+  top: 10rem; 
+  background: black; /*sets the colour of the background box*/
 }
 
 .game-board table tr td{ /*creates the white circles in the board*/
-  width: 90px;
-  height: 80px;
-  border: 2px solid black;
-  border-radius: 50%;
-  background-color: white;
-  cursor: pointer;
+  width: 80px; /*sets the width of the white box*/
+  height: 70px; /*sets the height of the white box*/
+  border: 2px solid black; /*border allows for the circles to be made for the slots*/
+  border-radius: 60%; /*sets how circular the slots are*/
+  background-color: white; /*sets the colour of the slots to white to easily distinguish the slots*/
+  cursor: pointer; /*displays the cursor over the slot to the user allowing better useability*/
 }
 
 .footer {
@@ -46,8 +46,7 @@ h1 {
 
 .reset {
   background-color: black;
-  border-radius: 5px;
-  border: none;
+  border-radius: 30px;
   color: white; /*font colour of button*/
   cursor: pointer;
   display: block;
@@ -60,7 +59,6 @@ h1 {
 
 .reset:active {
   background-color: white; /*reset button will flash white when clicked*/
-
 }
 
 .status {
@@ -68,11 +66,10 @@ h1 {
   font-size: 20px;
 }
 
-.player-one {
+.player-one { /*setting the colour of player 1 counter*/
  background: gray;
 }
 
-.player-two {
+.player-two { /*setting the colour of player 2 counter*/
   background: rgb(187, 234, 240);
 }
-
