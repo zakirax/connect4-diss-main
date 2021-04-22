@@ -96,4 +96,6 @@ https://en.wikipedia.org/wiki/SOLID#:~:text=In%20object%2Doriented%20computer%20
 
 
 https://stackoverflow.com/questions/39902809/support-for-es6-in-internet-explorer-11
+https://www.google.com/search?q=es5+vs+es6&rlz=1C1GCEA_enGB927GB927&oq=ES5+vs+ES6&aqs=chrome.0.0l4j0i395j0j0i395l4.471j1j7&sourceid=chrome&ie=UTF-8
+
 The syntax error recieved from IE was due to the ES6 (style) code written. IE only supports ES5.
