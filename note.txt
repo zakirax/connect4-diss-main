@@ -90,3 +90,10 @@ Originally all the code was in connect.js
 this is bad -> 
 All software should be: High Cohesion Low Coupling etc
 https://en.wikipedia.org/wiki/SOLID#:~:text=In%20object%2Doriented%20computer%20programming,understandable%2C%20flexible%2C%20and%20maintainable.
+
+
+----
+
+
+https://stackoverflow.com/questions/39902809/support-for-es6-in-internet-explorer-11
+The syntax error recieved from IE was due to the ES6 (style) code written. IE only supports ES5.
