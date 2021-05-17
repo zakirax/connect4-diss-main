@@ -1,5 +1,3 @@
-
-
 const colours = { // Enum of colours
     playerOne: "grey",
     playerTwo: "purple"
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tableCell[y].addEventListener('click', (event) => {
 
             //putting coin in correct position 
-            cellId = event.target.id.substring(5, event.target.id.length); // board6 => 6
+            cellId = event.target.id.substring(5, event.target.id.length); // id = board6 => 6
             var id = parseInt(cellId); // Id of cell position
             var col = Math.round(id % BOARD_COLS); // id % 7 // Gets the column
             var row = Math.round(id / BOARD_COLS); // id / 7 // Gets the row
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Checks space for counter
             for (var i = BOARD_ROWS - 1; i >= 0; i--) { // i = 6, from button to top
                 if (board[col][i] == 0) { // For this column and currenet row (i), is the cell empty?
-                    found = true;
+                    found = true; //if it is empty the counter can be dropped 
                     rowFound = i;
                     break;
                 }
@@ -62,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!found) return; // Cell is NOT empty, return as the row/col is full
             // /** Drops the counter as far as it can go */
             row = rowFound; // Finds the avaliable row
-            id = row * BOARD_COLS + col; // some calc Id to get where the counter should be
+            id = row * BOARD_COLS + col; // calcs Id to get where the counter should be
             cellId = id;
 
             if (isPlayerOneTurn) {
                 playTurn(cellId, col, row, 1, colours.playerOne, PLAYER2LBL);
             }
             else {
-                playTurn(cellId, col, row, 2, colours.playerTwo, PLAYER1LBL);        
+                playTurn(cellId, col, row, 2, colours.playerTwo, PLAYER1LBL);
             }
 
             isPlayerOneTurn = !isPlayerOneTurn;

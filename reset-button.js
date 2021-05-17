@@ -4,8 +4,8 @@ resetButton.addEventListener('click', () => {
     // Reset board
     board = new Array(BOARD_COLS);
     for (var col = 0; col < BOARD_COLS; col++) {
-        board[col] = new Array(BOARD_ROWS
-        );
+        board[col] = new Array(BOARD_ROWS);
+
         for (var row = 0; row < BOARD_ROWS; row++) {
             board[col][row] = 0;
         }
